@@ -1,6 +1,6 @@
 # Sales Dashboard Project
 
-This project explores the fictional company of Plant Co. to organize 3 tables of data into a dynamic dashboard for the end user. The dashboard is best used to identify problem areas within the company, such as locations or products that may be underperforming. Access the published report [here](https://app.fabric.microsoft.com/groups/me/reports/b4b39cf2-1ed7-48d2-886f-2631e3ab6ee8/c154c62908eb290d2b91?experience=fabric-developer) or download the .pbix file [here]().
+This project explores the fictional company of Plant Co. to organize 3 tables of data into a dynamic dashboard for the end user. The dashboard is best used to identify problem areas within the company, such as locations or products that may be underperforming. Access the published report [here](https://app.fabric.microsoft.com/groups/me/reports/b4b39cf2-1ed7-48d2-886f-2631e3ab6ee8/c154c62908eb290d2b91?experience=fabric-developer) or download the .pbix file [here](https://github.com/Elijah-Rodriguez/data-analysis/blob/main/Sales%20Dashboard/Plant%20Co%20Performance%20Report.pbix).
 
 ## Dataset
 
