@@ -8,6 +8,9 @@ Inspired by [Mo Chen](https://github.com/mochen862).
 
 Original dataset available [here](https://github.com/Elijah-Rodriguez/data-analysis/blob/main/Sales%20Dashboard/Plant_DTS.xls)
 
+## Tools
+PostgreSQL, Microsoft PowerBI
+
 ## Process
 
 ### 1. Data Cleaning
@@ -36,4 +39,4 @@ RENAME COLUMN Produt_Type TO Product_Type;
 ### 4. Conclusion
 By analyzing the waterfall chart, it's clear that landscape products in Canada during 2024 were underperforming. The end user can use this analysis, as well as noting that Canada exceeded their PYTD during Feburary to investigate why landscape products are not selling and what were the conditions that made February such a successful month for the company. This would allow Plant Co. to allocate resources more stragetically and make more confident decisions as the year progresses. 
 
-![PowerBI Plant Co Performance Dashboard](https://github.com/Elijah-Rodriguez/data-analysis/blob/main/Sales%20Dashboard/Plant%20Co%20Performance%20Report.pdf?raw=true)
+![Plant Co Performance Dashboard](https://github.com/Elijah-Rodriguez/data-analysis/blob/main/Sales%20Dashboard/Plant%20Co%20Performance%20Report.pdf?raw=true)
