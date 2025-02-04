@@ -70,7 +70,7 @@ Result:
 
 PostgreSQL Query:
 ```sql
-SELECT category, AVG(price) as avg_price
+SELECT category, ROUND(AVG(price), 2)
 FROM menu_items
 GROUP BY category;
 ```
