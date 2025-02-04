@@ -15,7 +15,8 @@ This dataset was cleaned in Microsoft Excel by replacing all NULL values with 0.
 
 ## Objective 1
 Taste of the World asked to write these queries in response to these questions:
-1. What are the total number of items on the updated menu?
+
+**1. What are the total number of items on the updated menu?**
 
 PostgreSQL Query:
 ```sql
@@ -24,23 +25,28 @@ FROM menu_items;
 ```
 
 Result:
-[obj 1 result](images/)
 
-2. What are the least and most expensive items on the menu?
+![Objective 1.1 result](images/obj1-1.png)
+
+
+**2. What are the least and most expensive items on the menu?**
 
 PostgreSQL Query:
 ```sql
 SELECT*
 FROM menu_items
-Where price IN (SELECT MAX(price) FROM menu_items) 
+WHERE price IN (SELECT MAX(price) FROM menu_items) 
 OR price IN (SELECT MIN(price) FROM menu_items);
 ```
 
 Result:
-[obj 1 result](images/)
-x is the least expensive item on the menu, while x is the most expensive item.
 
-3. What are the least and most expensive Italian dishes on the menu?
+![Objective 1.2 result](images/obj1-2.png)
+
+Edamame is the least expensive item on the menu, while Shrimp Scampi is the most expensive item.
+
+
+**3. What are the least and most expensive Italian dishes on the menu?**
    
 PostgreSQL Query:
 ```sql
@@ -51,10 +57,13 @@ ORDER BY price;
 ```
 
 Result:
-[obj 1 result](images/)
-x is the least expensive Italian item on the menu, while x is the most expensive item.
 
-4. How many dishes are in each category?
+![Objective 1.3 result](images/obj1-3.png)
+
+Fettuccine is the least expensive Italian item on the menu, while Shrimp Scampi is the most expensive item.
+
+
+**4. How many dishes are in each category?**
 
 PostgreSQL Query:
 ```sql
@@ -64,9 +73,11 @@ GROUP BY category;
 ```
 
 Result:
-[obj 1 result](images/)
 
-5. What is the average dish price within each category?
+![Objective 1.4 result](images/obj1-4.png)
+
+
+**5. What is the average dish price within each category?**
 
 PostgreSQL Query:
 ```sql
@@ -76,12 +87,13 @@ GROUP BY category;
 ```
 
 Result:
-[obj 1 result](images/)
+
+![Objective 1.5 result](images/obj1-5.png)
 
 ## Objective 2
 Taste of the World asked to write these queries in response to these questions:
 
-1. What is the date range of the order table?
+**1. What is the date range of the order table?**
 
 PostgreSQL Query:
 ```sql
@@ -92,11 +104,13 @@ FROM order_details;
 ```
 
 Result:
-[obj 2 result](images/)
+
+![Objective 2.1 result](images/obj2-1.png)
+
 The date range is 1/1/2023 - 3/31/2023.
    
 
-2. How many orders were made within this date range?
+**2. How many orders were made within this date range?**
 
 PostgreSQL Query:
 ```sql
@@ -105,9 +119,10 @@ FROM order_details;
 ```
 
 Result:
-[obj 2 result](images/)
 
-3. Which orders had the most amount of items?
+![Objective 2.2 result](images/obj2-2.png)
+
+**3. Which orders had the most amount of items?**
 
 PostgreSQL Query:
 ```sql
@@ -118,10 +133,11 @@ ORDER BY num_items DESC;
 ```
 
 Result:
-[obj 2 result](images/)
+
+![Objective 2.3 result](images/obj2-3.png)
 
 
-4. How many orders had more than 12 items?
+**4. How many orders had more than 12 items?**
 
 PostgreSQL Query:
 ```sql
@@ -133,12 +149,13 @@ HAVING COUNT(item_id) > 12) as num_orders;
 ```
 
 Result:
-[obj 2 result](images/)
+
+![Objective 2.4 result](images/obj2-4.png)
 
 ## Objective 3
 Taste of the World asked to write these queries in response to these questions:
 
-1. Combine the menu_items and order_details tables into one table.
+**1. Combine the menu_items and order_details tables into one table.**
 
 PostgreSQL Query:
 ```sql
@@ -148,9 +165,10 @@ FROM order_details od LEFT JOIN menu_items mi
 ```
 
 Result:
-[obj 3 result](images/)
 
-2. What were the least and most ordered items? What categories were they in?
+![Objective 3.1 result](images/obj3-1.png)
+
+**2. What were the least and most ordered items? What categories were they in?**
 
 PostgreSQL Query:
 ```sql
@@ -161,10 +179,13 @@ GROUP BY item_name, category
 ORDER BY num_purchases;
 ```
 
-Result:
-[obj 3 result](images/)
+Results:
 
-3. What were the top 5 orders that spent the most money?
+![Objective 3.2a result](images/obj3-2-least.png)
+
+![Objective 3.2b result](images/obj3-2-most.png)
+
+**3. What were the top 5 orders that spent the most money?**
 
 PostgreSQL Query:
 ```sql
@@ -178,9 +199,10 @@ LIMIT 5;
 ```
 
 Result:
-[obj 3 result](images/)
 
-4. View the details of the highest spent order. What insights can you gather from the data?
+![Objective 3.3 result](images/obj3-3.png)
+
+**4. View the details of the highest spent order. What insights can you gather from the data?**
 
 PostgreSQL Query:
 ```sql
@@ -192,9 +214,12 @@ GROUP BY category;
 ```
 
 Result:
-[obj 3 result](images/)
 
-5. View the details of the top 5 highest spending orders. What insights can you gather from the data?
+![Objective 3.4 result](images/obj3-4.png)
+
+Interestingly, even though American food is cheaper on average and the most popular dish type, the largest order consisted of Italian food the most. Italian food has the highest average price per dish and boasts the overall most expensive item on the menu. This could indicate that the quality of the food is considerably above the rest and can justify its continuation on the menu. 
+
+**5. View the details of the top 5 highest spending orders. What insights can you gather from the data?**
 
 PostgreSQL Query:
 ```sql
@@ -206,9 +231,13 @@ GROUP BY order_id, category;
 ```
 
 Result:
-[obj 3 result](images/)
+
+![Objective 3.5 result](images/obj3-5.png)
+
+Among the top 5 highest spending orders, Italian food dominated with 26 total orders. Shockingly, American food was ordered only 10 times among the 5 large orders. Assuming these orders are large parties of people dining in or ordering out, they may be more inclined to spend a larger amount of money if they believe the quality justifies the price as well as Italian food being extremely popular globally and in the United States. American food is still the cheaper option at Taste of the World, this may be the more popular option among people who eat by themselves or in a small group. Asian and Mexican food are performing closer to the standard of American food among the top 5 highest orders.
 
 
 ## Recommendations
 
+Based on the exploration of this data, it is clear that American and Italian food are performing very well for their respective purposes. A full fiscal year's worth of data would be the next logical step to compare quarterly performance among the various categories and to notice any trends among seasons which could influence the menu's performance. It would be worthwhile to potentially phase out Mexican food as it is among the least popular dishes and has as many dishes as Italian food. Phasing this out could save costs and allow for seasonal moments to re-introduce a smaller section of Mexican dishes.
 
