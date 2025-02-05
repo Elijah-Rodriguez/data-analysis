@@ -10,7 +10,7 @@ Poundbank recommends the `nannyml` library for monitoring machine learning model
 4. Use the univariate drift detection method to figure out why the accuracy dropped. Think of a possible explanation.
 
 
-Poundbank has provided a reference(test data) and analysis set(production data). The reference set can be found [here](https://github.com/Elijah-Rodriguez/data-analysis/blob/main/Fraud%20Detection/reference.csv) and the analysis set can be found [here](https://github.com/Elijah-Rodriguez/data-analysis/blob/main/Fraud%20Detection/analysis.csv). The python notebook can be found here(https://github.com/Elijah-Rodriguez/data-analysis/blob/main/Fraud%20Detection/model_monitoring.ipynb).
+Poundbank has provided a reference(test data) and analysis set(production data). The reference set can be found [here](https://github.com/Elijah-Rodriguez/data-analysis/blob/main/Fraud%20Detection/reference.csv) and the analysis set can be found [here](https://github.com/Elijah-Rodriguez/data-analysis/blob/main/Fraud%20Detection/analysis.csv). The python notebook can be found [here](https://github.com/Elijah-Rodriguez/data-analysis/blob/main/Fraud%20Detection/model_monitoring.ipynb).
 
 ## Data
 A summary and preview of the reference and analysis sets are provided below.
