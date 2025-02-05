@@ -10,7 +10,7 @@ Poundbank recommends the `nannyml` library for monitoring machine learning model
 4. Use the univariate drift detection method to figure out why the accuracy dropped. Think of a possible explanation.
 
 
-Poundbank has provided a reference(test data) and analysis set(production data). The reference set can be found [here](https://github.com/Elijah-Rodriguez/data-analysis/blob/main/Fraud%20Detection/reference.csv) and the analysis set can be found [here](https://github.com/Elijah-Rodriguez/data-analysis/blob/main/Fraud%20Detection/analysis.csv). The python notebook can be found here().
+Poundbank has provided a reference(test data) and analysis set(production data). The reference set can be found [here](https://github.com/Elijah-Rodriguez/data-analysis/blob/main/Fraud%20Detection/reference.csv) and the analysis set can be found [here](https://github.com/Elijah-Rodriguez/data-analysis/blob/main/Fraud%20Detection/analysis.csv). The python notebook can be found here(https://github.com/Elijah-Rodriguez/data-analysis/blob/main/Fraud%20Detection/model_monitoring.ipynb).
 
 ## Data
 A summary and preview of the reference and analysis sets are provided below.
@@ -75,7 +75,7 @@ est_results.compare(calc_results).plot().show()
 
 Comparison Plot:
 
-[obj 1 result](images/)
+![obj 1 result](images/obj1.png)
 
 From the plot, it can be seen that there are 3 months where both the expected and realized accuracy of the model triggered an alert. These months are April 2019, May 2019 and June 2019. With these months identified, they can be stored into a variable for future analysis or as part of a deliverable for a final report:
 
@@ -123,7 +123,7 @@ display(correlation_ranked_features)
 
 Result:
 
-[obj 2 result](images/)
+![obj 2 result](images/obj2.png)
 
 Based on the dataframe, it can be seen that the column that affects drift the most is the `time_since_login_min` column. As per Poundbank's request, this can be stored in a variable for potential use if more analysis needs to be done.
 
@@ -150,7 +150,7 @@ stats_avg_results.plot().show()
 
 Result:
 
-[obj 3 result](images/)
+![obj 3 result](images/obj3.png)
 
 Based on the plot, there was only one alert triggered and it was during June 2019. The transaction amount that triggered the alert was $3069.8184.
 
@@ -166,7 +166,7 @@ udc_results.filter(column_names=features).plot(kind="distribution")
 
 Result:
 
-[obj 4 result](images/)
+![obj 4 result](images/obj4.png)
 
 Based on the distribution plots, some observations can be made. First, the `time_since_log_min` distribution shows that from April to June, the transactions made within one minute after logging in completely vanished. Also, the `transaction_amount` distribution shows that in May and June, a larger number of transactions appeared. Additionally, the average transaction value has increased and raised an alert, as noted during Objective 3.
 
