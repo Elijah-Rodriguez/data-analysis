@@ -17,7 +17,6 @@ After data cleaning, this is the relationship betweeen the data:
 
 ![erd](images/edr.png)
 
-
 Inspired by [Mo Chen](https://github.com/mochen862).
 
 Original dataset available [here](https://github.com/Elijah-Rodriguez/data-analysis/blob/main/Plant%20Co%20Performance%20Dashboard/Plant_DTS.xls).
@@ -36,7 +35,7 @@ RENAME COLUMN Produt_Type TO Product_Type;
 ```
 
 - Formatting was clean upon inspecting the dataset within a PostgreSQL database as I transitioned to importing the data into PowerQuery.
-- Only 2 additional changes happened after importing the data: Removing duplicate entries in all ID columns and confirming the Date_Time column within the Plant_FACT table was using the correct datatype.
+- Only 3 additional changes happened after importing the data: Removing duplicate entries in all ID columns, confirming the Date_Time column within the Plant_FACT table was using the correct datatype, and renaming the tables to be consistent. Plant_FACT was renamed to Fact_sales, Accounts was renamed to Dim_Accounts and Plant_Hierarchy was renamed to Dim_Product.
 
 ### 2. Data Modeling
 - After cleaning and importing the data, my next step was creating the basic measures that would be needed for KPI tracking and calculations. These included measures such as total sales, quantity, gross profit, and values for a switch that will be added later.
@@ -48,7 +47,6 @@ RENAME COLUMN Produt_Type TO Product_Type;
 - A treemap was added to demonstate the bottom 10 countries that had the highest difference between YTD and PYTD values.
 - A waterfall chart was added to allow the opportunity to drill down and analyze specific countries and product type to correctly identify problem locations and products.
 - All charts include a dynamic title and result that updates after changing the YTD as well as the tracked metric.
-
 
 ### 4. Conclusion
 By analyzing the waterfall chart, it's clear that landscape products in Canada during 2024 were underperforming. The end user can use this analysis, as well as noting that Canada exceeded their PYTD during Feburary to investigate why landscape products are not selling and what were the conditions that made February such a successful month for the company. This would allow Plant Co. to allocate resources more stragetically and make more confident decisions as the year progresses. 
