@@ -1,8 +1,20 @@
-# Plant Co. Performance Dashboard Project
+# Plant Co. Dynamic Sales Performance (2022-Q12024) Dashboard
 
-This project explores the fictional company of Plant Co. to organize 3 tables of data into a dynamic dashboard for the end user. The dashboard is best used to identify problem areas within the company, such as locations or products that may be underperforming. Access the published report [here](https://app.fabric.microsoft.com/groups/me/reports/b4b39cf2-1ed7-48d2-886f-2631e3ab6ee8/c154c62908eb290d2b91?experience=fabric-developer) or download the .pbix file [here](https://github.com/Elijah-Rodriguez/data-analysis/blob/main/Sales%20Dashboard/Plant%20Co%20Performance%20Report.pbix).
+This project explores the fictional company of Plant Co. to organize 3 tables of data into a dynamic dashboard for the end user. The dashboard is best used to identify problem areas within the company, such as locations or products that may be underperforming, as well as noting aspects of growth that occur within the 2 year period. The end user is able to dynamically track gross profit, quantity and sales metrics while viewing comparisons between the previous year-to-date.
+
+Access the published report [here](https://app.fabric.microsoft.com/groups/me/reports/b4b39cf2-1ed7-48d2-886f-2631e3ab6ee8/c154c62908eb290d2b91?experience=fabric-developer) or download the .pbix file [here](https://github.com/Elijah-Rodriguez/data-analysis/blob/main/Sales%20Dashboard/Plant%20Co%20Performance%20Report.pbix).
 
 ## Dataset
+
+This dataset is comprised of 3 seperate tables: 
+- Plant_FACT: This table is sales invoiced and contains product IDs, total sales per product, quantity, price, cost of goods, the date the invoice was logged and the account ID.
+- Accounts: This stores all the unique accounts on file and includes country codes, account names, master ID, account ID, latitude/longitude, country, postal code, street name and street number.
+- Plant_Hierarchy: This table stores all the relevant information for products such as product family, product family ID, product group, product group ID, product name, product name ID, product size and product type.
+
+After data cleaning, this is the relationship betweeen the data:
+
+![erd](images/)
+
 
 Inspired by [Mo Chen](https://github.com/mochen862).
 
