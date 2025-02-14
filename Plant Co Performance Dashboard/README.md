@@ -2,6 +2,8 @@
 
 This project explores the fictional company of Plant Co. to organize 3 tables of data into a dynamic dashboard for the end user. The dashboard is best used to identify problem areas within the company, such as locations or products that may be underperforming, as well as noting aspects of growth that occur within the 2 year period. The end user is able to dynamically track gross profit, quantity and sales metrics while viewing comparisons between the previous year-to-date.
 
+![Dashboard Preview](images/dash-preview.png)
+
 Access the published report [here](https://app.fabric.microsoft.com/groups/me/reports/b4b39cf2-1ed7-48d2-886f-2631e3ab6ee8/c154c62908eb290d2b91?experience=fabric-developer) or download the .pbix file [here](https://github.com/Elijah-Rodriguez/data-analysis/blob/main/Sales%20Dashboard/Plant%20Co%20Performance%20Report.pbix).
 
 ## Dataset
@@ -13,12 +15,12 @@ This dataset is comprised of 3 seperate tables:
 
 After data cleaning, this is the relationship betweeen the data:
 
-![erd](images/)
+![erd](images/edr.png)
 
 
 Inspired by [Mo Chen](https://github.com/mochen862).
 
-Original dataset available [here](https://github.com/Elijah-Rodriguez/data-analysis/blob/main/Plant%20Co%20Performance%20Dashboard/Plant_DTS.xls)
+Original dataset available [here](https://github.com/Elijah-Rodriguez/data-analysis/blob/main/Plant%20Co%20Performance%20Dashboard/Plant_DTS.xls).
 
 ## Tools
 PostgreSQL, Microsoft PowerBI
@@ -51,4 +53,3 @@ RENAME COLUMN Produt_Type TO Product_Type;
 ### 4. Conclusion
 By analyzing the waterfall chart, it's clear that landscape products in Canada during 2024 were underperforming. The end user can use this analysis, as well as noting that Canada exceeded their PYTD during Feburary to investigate why landscape products are not selling and what were the conditions that made February such a successful month for the company. This would allow Plant Co. to allocate resources more stragetically and make more confident decisions as the year progresses. 
 
-![Dashboard Preview](images/PlantCoDashboard.png)
